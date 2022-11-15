@@ -15,10 +15,12 @@ public class Pret {
         int s = S0;
         int monthCount = 0;
         Double i = 0.0;
-        if (S0 < 0 || r < 0){
-            System.out.print("Enter Positive Values");
-        }else if ( ir < 0 && ir > 1){
-            System.out.print("Invalid Interest Rate");
+        if (S0 < 0 ){
+            System.out.print("Invalid Loan Amount");
+        }else if (r < 0){
+            System.out.print("Invalid Reimburses Amount");
+        }else if ( ir <= 0 || ir >= 1){
+            System.out.print("Invalid Interest Rate. Value should be between 0 and 1");
         }else {
             while (s > 0 ){
                 i = i + (ir * s);
